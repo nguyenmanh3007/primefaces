@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+<h:body>
+    <h:form>
+        <h1>Hello World!</h1>
+        <br />
+        <br />
+        <p:outputLabel value="Name: " />
+        <p:inputText value="#{helloBean.name}" />
+        <br />
+        <p:outputLabel value="Description:" />
+        <p:editor value="#{helloBean.description}" width="500" />
+        <br />
+        <p:outputLabel for="date" value="Date:" />
+        <p:calendar id="date" value="#{helloBean.date}" mode="inline" />
+    </h:form>
+    <p:panel header="Thông tin người dùng">
+        <h:panelGrid columns="2">
+            <h:outputLabel for="name" value="Tên:" />
+            <p:inputText id="name" />
+
+            <h:outputLabel for="email" value="Email:" />
+            <p:inputText id="email" />
+
+            <p:commandButton value="Lưu" />
+        </h:panelGrid>
+    </p:panel>
+</h:body>
+</html>
